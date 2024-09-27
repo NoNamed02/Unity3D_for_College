@@ -6,6 +6,7 @@ public class PlayerMove_NoCharaterController : MonoBehaviour
 {
     private float _horizontal; // 좌우
     private float _vertical; // 위아래
+    [SerializeField]
     private float _mouseX; // 마우스 좌표값
     private Animator animator;
     private Vector3 cameraVelocity = Vector3.zero;

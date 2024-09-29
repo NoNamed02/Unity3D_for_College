@@ -25,13 +25,18 @@ public class PlayerMove_NoCharaterController : MonoBehaviour
 
     void Update()
     {
+        Get_Input();
+        Move_Object();
+        Set_Animation();
+        Move_Camera();
+    }
+
+    private void Get_Input()
+    {
         _horizontal = Input.GetAxis("Horizontal");
         _vertical = Input.GetAxis("Vertical");
 
         _mouseX = Input.GetAxis("Mouse X") * view_speed * Time.deltaTime;
-
-        Move_Object();
-        Move_Camera();
     }
 
     private void Move_Object()
@@ -48,8 +53,11 @@ public class PlayerMove_NoCharaterController : MonoBehaviour
         gameObject.transform.Translate(hori, 0, vert);
 
         gameObject.transform.Rotate(0, _mouseX * view_speed, 0);
+    }
 
-        if (new Vector3(x, 0, y).magnitude > 0.5f)
+    private void Set_Animation()
+    {
+        if (new Vector3(_horizontal, 0, _vertical).magnitude > 0.5f)
             animator.SetFloat("Speed", 1f);
         else
             animator.SetFloat("Speed", 0f);

@@ -77,10 +77,7 @@ public class PlayerMove : MonoBehaviour
         Vector3 movement = new Vector3(mappedX, 0, mappedY) * moveSpeed * Time.deltaTime;
         transform.Translate(movement);
 
-        if (!_isAiming)
-        {
-            RotatePlayer();
-        }
+        RotatePlayer();
     }
 
     private void RotatePlayer()

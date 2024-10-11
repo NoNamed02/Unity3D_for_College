@@ -5,39 +5,27 @@ using UnityEngine;
 
 public class PlayerMove_NoCharaterController : MonoBehaviour
 {
-    enum animation
-    {
-        run_F,
-        run_L,
-        run_R,
-        walk_B
-    }
-
-    [SerializeField]
-    private float _horizontal; // 좌우
-    [SerializeField]
-    private float _vertical; // 위아래
-    [SerializeField]
-    private float _mouseX; // 마우스 좌표값
-    private Animator animator;
-    private Vector3 cameraVelocity = Vector3.zero;
-
-    public Transform cameraTransform;
     public int speed = 10;
     public int view_speed = 100;
     public float cameraSpeed = 0.3f;
-    GameObject Player;
+    public Transform cameraTransform;
 
-    private GameObject bullet;
 
-    //public float x, y, z; //임시
+    private float _horizontal; // 좌우
+    private float _vertical; // 위아래
+    private float _mouseX; // 마우스 좌표값
+    private bool _mouse0; // 마우스 좌클릭 감지
+    private Animator _animator;
+
+    private Vector3 cameraVelocity = Vector3.zero;
+    private GameObject _firePos;
+
+    private GameObject _bullet;
+    private MeshRenderer _muzzleFlash;
+
     void Start()
     {
-        _mouseX = 0f;
-        animator = GetComponent<Animator>();
-        Player = GameObject.Find("Player");
-
-        bullet = Resources.Load<GameObject>("Bullet");
+        Init();
     }
 
     void Update()
@@ -46,9 +34,20 @@ public class PlayerMove_NoCharaterController : MonoBehaviour
         Move_Object();
         Set_Animation();
         Move_Camera();
+        FireBullet();
+    }
 
-        if(Input.GetMouseButtonDown(0))
-            Instantiate(bullet, gameObject.transform.position + new Vector3(0f, 1f, 0), Quaternion.identity);
+
+    private void Init()
+    {
+        _mouseX = 0f;
+        _animator = GetComponent<Animator>();
+        _firePos = GameObject.Find("FirePos");
+
+        _bullet = Resources.Load<GameObject>("Bullet");
+        
+        _muzzleFlash = GameObject.Find("Muzzle").GetComponent<MeshRenderer>();
+        _muzzleFlash.enabled = false;
     }
 
     private void Get_Input()
@@ -57,6 +56,8 @@ public class PlayerMove_NoCharaterController : MonoBehaviour
         _vertical = Input.GetAxis("Vertical");
 
         _mouseX = Input.GetAxis("Mouse X") * view_speed * Time.deltaTime;
+
+        _mouse0 = Input.GetMouseButtonDown(0);
     }
 
     private void Move_Object()
@@ -78,32 +79,28 @@ public class PlayerMove_NoCharaterController : MonoBehaviour
     private void Set_Animation()
     {
         if (new Vector3(_horizontal, 0, _vertical).magnitude > 0.5f)
-            animator.SetFloat("Speed", 1f);
+            _animator.SetFloat("Speed", 1f);
         else
-            animator.SetFloat("Speed", 0f);
+            _animator.SetFloat("Speed", 0f);
 
-        //if (_vertical > 0.4) _vertical = 0.2f; // animation clip
-        animator.SetFloat("X", _horizontal);
-        animator.SetFloat("Y", _vertical);
+        _animator.SetFloat("X", _horizontal);
+        _animator.SetFloat("Y", _vertical);
+    }
+
+    private void FireBullet()
+    {
+        if(_mouse0)
+        {
+            Instantiate(_bullet, _firePos.transform.position, Quaternion.identity); // ver 1
+            //Instantiate(_bullet, _firePos.transform.position, _muzzleFlash.gameObject.transform.rotation);
+            StartCoroutine(ShowMuzzleFlash());
+            //ShowMuzzleFlash_2rd();
+        }
     }
 
     private void Move_Camera()
     {
-        /*
         Vector3 offset = new Vector3(0f, 3f, -8f);
-        Quaternion camRotation = Quaternion.Euler(0f, _mouseX * view_speed, 0f);
-        Vector3 desiredPosition = Player.transform.position + camRotation * offset;
-        cameraTransform.position = Vector3.SmoothDamp(cameraTransform.position, desiredPosition, ref cameraVelocity, cameraSpeed);
-        cameraTransform.LookAt(Player.transform.position + new Vector3(0f, 1.5f, 0f));
-        Camera.main.transform.position = Vector3.SmoothDamp(gameObject.transform.position + new Vector3(0, 3f, -8f), );
-        */
-    
-        //Camera.main.transform.position = Vector3.SmoothDamp(gameObject.transform.position, gameObject.transform.position + Quaternion.Euler(0f, _mouseX * view_speed, 0f) * new Vector3(0f, 3f, -8f), ref cameraVelocity, cameraSpeed);
-        //cameraTransform.LookAt(gameObject.transform.position + new Vector3(0f, 1.5f, 0f));
-        
-
-        Vector3 offset = new Vector3(0f, 3f, -8f);
-        //offset = new Vector3(0,0,0);
         
         Quaternion cameraRotation = Quaternion.Euler(0f, gameObject.transform.eulerAngles.y, 0f); // 플레이어의 Y축 회전 반영
 
@@ -111,13 +108,31 @@ public class PlayerMove_NoCharaterController : MonoBehaviour
 
         Camera.main.transform.position = Vector3.SmoothDamp(Camera.main.transform.position, desiredPosition, ref cameraVelocity, cameraSpeed);
 
-        cameraTransform.LookAt(gameObject.transform.position + new Vector3(0f, 1.5f, 0f)); 
+        cameraTransform.LookAt(gameObject.transform.position + new Vector3(0f, 1.5f, 0f));
+    }
 
-        /*
-        Camera.main.transform.position = 
-        Vector3.Lerp(transform.position, transform.position - transform.forward * 8f + Vector3.up * 3f, Time.deltaTime * 20f);
-        */
+    // 코루틴을 많이 사용하면 유니티가 죽는다
+    IEnumerator ShowMuzzleFlash()
+    {
+        _muzzleFlash.enabled = true;
+        _muzzleFlash.gameObject.transform.localScale = Vector3.one * Random.Range(0.3f, 0.7f);
+        _muzzleFlash.gameObject.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 90));
+        yield return new WaitForSeconds(Random.Range(0.1f, 0.3f));
+        _muzzleFlash.enabled = false;
+    }
 
-        //transform.position = Vector3.Lerp(transform.position, targetTr.position - targetTr.forward * Distance + Vector3.up * height, Time.deltaTime * dampingTrace);
+    private void ShowMuzzleFlash_2rd() // 코루틴 일반 함수로 구현
+    {
+        _muzzleFlash.enabled = true;
+        _muzzleFlash.gameObject.transform.localScale = Vector3.one * Random.Range(0.3f, 0.7f);
+        _muzzleFlash.gameObject.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 90));
+
+        float waitTime = Random.Range(0.1f, 0.3f);
+        Invoke(nameof(DisableMuzzleFlash), waitTime);
+    }
+
+    private void DisableMuzzleFlash()
+    {
+        _muzzleFlash.enabled = false;
     }
 }

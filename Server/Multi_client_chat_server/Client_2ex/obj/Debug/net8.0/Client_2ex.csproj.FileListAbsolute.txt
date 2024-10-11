@@ -1,0 +1,14 @@
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\bin\Debug\net8.0\Client_2ex.exe
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\bin\Debug\net8.0\Client_2ex.deps.json
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\bin\Debug\net8.0\Client_2ex.runtimeconfig.json
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\bin\Debug\net8.0\Client_2ex.dll
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\bin\Debug\net8.0\Client_2ex.pdb
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\obj\Debug\net8.0\Client_2ex.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\obj\Debug\net8.0\Client_2ex.AssemblyInfoInputs.cache
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\obj\Debug\net8.0\Client_2ex.AssemblyInfo.cs
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\obj\Debug\net8.0\Client_2ex.csproj.CoreCompileInputs.cache
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\obj\Debug\net8.0\Client_2ex.dll
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\obj\Debug\net8.0\refint\Client_2ex.dll
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\obj\Debug\net8.0\Client_2ex.pdb
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\obj\Debug\net8.0\Client_2ex.genruntimeconfig.cache
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Client_2ex\obj\Debug\net8.0\ref\Client_2ex.dll

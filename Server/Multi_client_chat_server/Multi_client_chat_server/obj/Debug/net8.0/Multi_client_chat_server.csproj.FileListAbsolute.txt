@@ -1,0 +1,14 @@
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\bin\Debug\net8.0\Multi_client_chat_server.exe
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\bin\Debug\net8.0\Multi_client_chat_server.deps.json
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\bin\Debug\net8.0\Multi_client_chat_server.runtimeconfig.json
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\bin\Debug\net8.0\Multi_client_chat_server.dll
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\bin\Debug\net8.0\Multi_client_chat_server.pdb
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\obj\Debug\net8.0\Multi_client_chat_server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\obj\Debug\net8.0\Multi_client_chat_server.AssemblyInfoInputs.cache
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\obj\Debug\net8.0\Multi_client_chat_server.AssemblyInfo.cs
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\obj\Debug\net8.0\Multi_client_chat_server.csproj.CoreCompileInputs.cache
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\obj\Debug\net8.0\Multi_client_chat_server.dll
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\obj\Debug\net8.0\refint\Multi_client_chat_server.dll
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\obj\Debug\net8.0\Multi_client_chat_server.pdb
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\obj\Debug\net8.0\Multi_client_chat_server.genruntimeconfig.cache
+C:\Users\Yuka\source\repos\Multi_client_chat_server\Multi_client_chat_server\obj\Debug\net8.0\ref\Multi_client_chat_server.dll

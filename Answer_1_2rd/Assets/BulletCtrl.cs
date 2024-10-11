@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class BulletCtrl : MonoBehaviour
 {
+    public float speed = 5.0f;
     private Rigidbody _rigidbody;
-
+    private GameObject _player;
     void Start()
     {
+        _player = GameObject.Find("Muzzle");
         _rigidbody = GetComponent<Rigidbody>();
-        _rigidbody.AddForce(new Vector3(1f, 0f, 0f), ForceMode.Impulse);
-        _rigidbody.useGravity = false;
-    }
-    void Update()
-    {
+        //gameObject.transform.rotation = _player.transform.rotation;
         
+        //_rigidbody.AddForce(new Vector3(1, 0, 0), ForceMode.Impulse);
+        _rigidbody.AddForce(_player.transform.forward * speed * -1f, ForceMode.Impulse); // ver 1
+        _rigidbody.useGravity = false;
     }
 }

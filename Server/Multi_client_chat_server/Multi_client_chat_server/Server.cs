@@ -20,15 +20,13 @@ class UdpChatServer
         {
             try
             {
-                // 비동기로 클라이언트 메시지 수신
                 UdpReceiveResult receivedResult = await udpServer.ReceiveAsync();
                 IPEndPoint clientEndPoint = receivedResult.RemoteEndPoint;
                 string receivedMessage = Encoding.UTF8.GetString(receivedResult.Buffer);
 
-                // 새로운 클라이언트가 닉네임을 설정할 때
                 if (!connectedClients.ContainsKey(clientEndPoint))
                 {
-                    connectedClients.Add(clientEndPoint, receivedMessage);  // 닉네임을 저장
+                    connectedClients.Add(clientEndPoint, receivedMessage);
                     Console.WriteLine($"New client connected: {clientEndPoint.Address}:{clientEndPoint.Port} with nickname '{receivedMessage}'");
 
                     // 다른 클라이언트들에게 새 클라이언트 접속 알림
@@ -56,8 +54,6 @@ class UdpChatServer
             // 메시지 수신자가 보낸 경우
             if (message == "disconnect")
             {
-                connectedClients.Remove(senderEndPoint);
-
                 string exitMessage = $"{connectedClients[senderEndPoint]} has left the chat.";
                 byte[] exitMessageBytes = Encoding.UTF8.GetBytes(exitMessage);
 
@@ -65,8 +61,7 @@ class UdpChatServer
                 {
                     await udpServer.SendAsync(exitMessageBytes, exitMessageBytes.Length, client);
                 }
-
-                
+                connectedClients.Remove(senderEndPoint);
                 return;
             }
 

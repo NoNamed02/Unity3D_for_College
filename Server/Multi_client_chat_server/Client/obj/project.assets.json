@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Client\\Client.csproj",
+      "projectUniqueName": "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Client\\Client.csproj",
       "projectName": "Client",
-      "projectPath": "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Client\\Client.csproj",
+      "projectPath": "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Client\\Client.csproj",
       "packagesPath": "C:\\Users\\Yuka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Client\\obj\\",
+      "outputPath": "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Yuka\\AppData\\Roaming\\NuGet\\NuGet.Config",

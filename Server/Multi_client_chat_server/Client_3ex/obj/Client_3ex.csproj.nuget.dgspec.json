@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Client_3ex\\Client_3ex.csproj": {}
+    "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Client_3ex\\Client_3ex.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Client_3ex\\Client_3ex.csproj": {
+    "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Client_3ex\\Client_3ex.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Client_3ex\\Client_3ex.csproj",
+        "projectUniqueName": "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Client_3ex\\Client_3ex.csproj",
         "projectName": "Client_3ex",
-        "projectPath": "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Client_3ex\\Client_3ex.csproj",
+        "projectPath": "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Client_3ex\\Client_3ex.csproj",
         "packagesPath": "C:\\Users\\Yuka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Client_3ex\\obj\\",
+        "outputPath": "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Client_3ex\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Yuka\\AppData\\Roaming\\NuGet\\NuGet.Config",

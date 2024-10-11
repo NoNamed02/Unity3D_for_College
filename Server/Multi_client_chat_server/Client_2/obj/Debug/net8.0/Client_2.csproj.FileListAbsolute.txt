@@ -1,0 +1,15 @@
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\bin\Debug\net8.0\Client_2.exe
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\bin\Debug\net8.0\Client_2.deps.json
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\bin\Debug\net8.0\Client_2.runtimeconfig.json
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\bin\Debug\net8.0\Client_2.dll
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\bin\Debug\net8.0\Client_2.pdb
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\obj\Debug\net8.0\Client_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\obj\Debug\net8.0\Client_2.AssemblyInfoInputs.cache
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\obj\Debug\net8.0\Client_2.AssemblyInfo.cs
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\obj\Debug\net8.0\Client_2.csproj.CoreCompileInputs.cache
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\obj\Debug\net8.0\Client_2.sourcelink.json
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\obj\Debug\net8.0\Client_2.dll
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\obj\Debug\net8.0\refint\Client_2.dll
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\obj\Debug\net8.0\Client_2.pdb
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\obj\Debug\net8.0\Client_2.genruntimeconfig.cache
+C:\Users\Yuka\Documents\GitHub\Unity3D_for_College\Server\Multi_client_chat_server\Client_2\obj\Debug\net8.0\ref\Client_2.dll

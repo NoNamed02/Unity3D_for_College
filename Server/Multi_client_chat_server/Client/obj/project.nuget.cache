@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WT0btBaJKGMoJ53VLZA2WsD8gVVV/kuFVd6je/p9sbo1Yz4xjoV7lrJaepHetyeUWyxS8EjJuBSODRamQAv4uA==",
+  "dgSpecHash": "t2LfdBfCc9jwVyqIerDcKc9Ln1K69xWYMuy5Zxs96h0FlSlyqcsV5St4MdKVel62tsRb1rFzPB2lGZ/QmTDq8A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Client\\Client.csproj",
+  "projectFilePath": "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Client\\Client.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

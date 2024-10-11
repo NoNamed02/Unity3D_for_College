@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Server_1\\Server_1.csproj": {}
+    "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Server_1\\Server_1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Server_1\\Server_1.csproj": {
+    "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Server_1\\Server_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Server_1\\Server_1.csproj",
+        "projectUniqueName": "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Server_1\\Server_1.csproj",
         "projectName": "Server_1",
-        "projectPath": "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Server_1\\Server_1.csproj",
+        "projectPath": "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Server_1\\Server_1.csproj",
         "packagesPath": "C:\\Users\\Yuka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yuka\\source\\repos\\Multi_client_chat_server\\Server_1\\obj\\",
+        "outputPath": "C:\\Users\\Yuka\\Documents\\GitHub\\Unity3D_for_College\\Server\\Multi_client_chat_server\\Server_1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Yuka\\AppData\\Roaming\\NuGet\\NuGet.Config",

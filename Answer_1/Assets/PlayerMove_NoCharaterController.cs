@@ -22,6 +22,8 @@ public class PlayerMove_NoCharaterController : MonoBehaviour
 
     private GameObject _bullet;
     private MeshRenderer _muzzleFlash;
+    [SerializeField]
+    private bool _canMove = true;
 
     void Start()
     {
@@ -52,12 +54,15 @@ public class PlayerMove_NoCharaterController : MonoBehaviour
 
     private void Get_Input()
     {
-        _horizontal = Input.GetAxis("Horizontal");
-        _vertical = Input.GetAxis("Vertical");
+        if(_canMove)
+        {
+            _horizontal = Input.GetAxis("Horizontal");
+            _vertical = Input.GetAxis("Vertical");
 
-        _mouseX = Input.GetAxis("Mouse X") * view_speed * Time.deltaTime;
+            _mouseX = Input.GetAxis("Mouse X") * view_speed * Time.deltaTime;
 
-        _mouse0 = Input.GetMouseButtonDown(0);
+            _mouse0 = Input.GetMouseButtonDown(0);
+        }
     }
 
     private void Move_Object()
@@ -134,5 +139,27 @@ public class PlayerMove_NoCharaterController : MonoBehaviour
     private void DisableMuzzleFlash()
     {
         _muzzleFlash.enabled = false;
+    }
+
+    /*
+    private void OnTriggerEnter(Collider other)
+    {
+        //if (other == gameObject.tag("Wall"));
+    }
+    */
+
+    private void OnCollisionStay(Collision collision)
+    {
+        GameObject col = collision.gameObject;
+        if (col.tag == "jumpWall")
+            StartCoroutine(JumpWall());
+    }
+
+    private IEnumerator JumpWall()
+    {
+        _canMove = false;
+        _animator.Play("UMATOBI00");
+        yield return new WaitForSeconds(1f);
+        _canMove = true;
     }
 }

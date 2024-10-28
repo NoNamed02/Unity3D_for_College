@@ -7,6 +7,9 @@ TagManager:
   - wall
   - jumpWall
   - barrel
+  - E_B
+  - E_G
+  - E_Y
   layers:
   - Default
   - TransparentFX

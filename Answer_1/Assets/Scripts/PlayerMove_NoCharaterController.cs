@@ -35,7 +35,7 @@ public class PlayerMove_NoCharaterController : MonoBehaviour
         Get_Input();
         Move_Object();
         Set_Animation();
-        Move_Camera();
+        //Move_Camera();
         FireBullet();
     }
 
@@ -78,7 +78,7 @@ public class PlayerMove_NoCharaterController : MonoBehaviour
 
         gameObject.transform.Translate(hori, 0, vert);
 
-        gameObject.transform.Rotate(0, _mouseX * view_speed, 0);
+        //gameObject.transform.Rotate(0, _mouseX * view_speed, 0);
     }
 
     private void Set_Animation()

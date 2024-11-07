@@ -7,18 +7,19 @@ using UnityEngine.AI;
 public class TargetTracking : MonoBehaviour
 {
     public GameObject _target;
-    
     [SerializeField]
     private float _rayDistance = 10f;
     [SerializeField]
     public string layerName;
     [SerializeField]
     private string targetTag;
-
     private NavMeshAgent _agent;
     private LayerMask _obstacleLayer;
     private bool _isFind = false;
     private float _iter = 0;
+    [SerializeField]
+    private float angle = 30f;
+    
     void Start()
     {
         Setup();
@@ -81,6 +82,15 @@ public class TargetTracking : MonoBehaviour
         {
             Gizmos.color = Color.red;
             Gizmos.DrawRay(transform.position, transform.forward * _rayDistance);
+
+            float FindAngle = -angle/2;
+            for (int i = 0; i > 10; i++)
+            {
+                float inAngle = (angle/10) * i;
+                Quaternion rotation = Quaternion.Euler(0, FindAngle + inAngle, 0);
+                Vector3 direction = rotation * transform.forward;
+                Gizmos.DrawLine(transform.position, direction);
+            }
         }
     }
 }

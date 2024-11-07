@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class Nav_enemy : MonoBehaviour
 {
@@ -57,10 +58,20 @@ public class Nav_enemy : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        float E = 30f;
         if (_target != null)
         {
             Gizmos.color = Color.red;
             Gizmos.DrawRay(transform.position, transform.forward * _rayDistance);
+            float angle = -(E/2);
+            for (int i = 0; i < 10; i++)
+            {
+                angle += E / 10;
+                Quaternion rotation = Quaternion.Euler(0, angle, 0);
+                Vector3 direction = rotation * transform.forward;
+
+                Gizmos.DrawRay(transform.position, direction * _rayDistance);
+            }
         }
     }
 }

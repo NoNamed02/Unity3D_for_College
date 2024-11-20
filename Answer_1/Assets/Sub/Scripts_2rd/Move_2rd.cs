@@ -8,6 +8,8 @@ public class Move_2rd : MonoBehaviour
     float x, y;
     float speed = 5f;
 
+    public int HP = 100;
+
     Vector3 offset = new Vector3(0, 6, -10);
     void Start()
     {

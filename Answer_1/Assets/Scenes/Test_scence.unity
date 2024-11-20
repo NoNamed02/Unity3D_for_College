@@ -197,7 +197,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 603583bb8cafd4662844755c7170ebad, type: 2}
   - {fileID: 2100000, guid: 494436c5a2b114fc68703c7d8e756652, type: 2}
   - {fileID: 2100000, guid: 8a3f723b18ff24eb4a961d4ab5c1967d, type: 2}
-  monsterPrefab: {fileID: 5757980575438414107, guid: 95b8a3fe0ecfe4d68887a7c268dd72e1, type: 3}
+  monsterPrefab: {fileID: 8112025928124452185, guid: 89ecfbafbd6794d4f88800d013250b51, type: 3}
 --- !u!4 &583275718
 Transform:
   m_ObjectHideFlags: 0
@@ -567,7 +567,6 @@ GameObject:
   - component: {fileID: 1251370969}
   - component: {fileID: 1251370968}
   - component: {fileID: 1251370967}
-  - component: {fileID: 1251370972}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -589,6 +588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 0
   y: 0
+  HP: 100
 --- !u!136 &1251370968
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -678,33 +678,6 @@ Transform:
   - {fileID: 1723333513}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1251370972
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251370966}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!1 &1374050015
 GameObject:
   m_ObjectHideFlags: 0

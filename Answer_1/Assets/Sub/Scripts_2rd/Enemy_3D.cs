@@ -11,6 +11,7 @@ public class Enemy_3D : MonoBehaviour
     private float _distanceToPlayer;
     private bool _attack = false;
     private Animator _animator;
+    private int HP = 3;
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -31,6 +32,8 @@ public class Enemy_3D : MonoBehaviour
             }
             else if (!_attack) _agent.SetDestination(_target.position);
         }
+
+        if (HP <= 0) Destroy(gameObject);
     }
 
     private IEnumerator Attack()
@@ -82,6 +85,7 @@ public class Enemy_3D : MonoBehaviour
             {
                 // 낮은쪽을 파괴
                 transform.localScale += new Vector3(0.3f, 0.3f, 0.3f);
+                HP = 5;
                 Destroy(other.gameObject);
             }
             else
@@ -93,6 +97,11 @@ public class Enemy_3D : MonoBehaviour
         else if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<Move_2rd>().HP-=5;
+        }
+        else if (other.gameObject.CompareTag("bullet"))
+        {
+            --HP;
+            Destroy(other.gameObject);
         }
     }
 }

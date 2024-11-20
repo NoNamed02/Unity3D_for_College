@@ -26,9 +26,9 @@ public class Gamemanager : MonoBehaviour
         for (int i = 0; i < spwanpoint.Length; i ++)
         {
             GameObject Monster = Instantiate(monsterPrefab, spwanpoint[i].position, Quaternion.identity);
-            //int materialIndex = Random.Range(0, materials.Length);
-            //Monster.GetComponent<MeshRenderer>().material = materials[materialIndex];
-            switch (Random.Range(0,3))
+            int materialIndex = Random.Range(0, materials.Length);
+            Monster.GetComponent<MeshRenderer>().material = materials[materialIndex];
+            switch (materialIndex)
             {
                 case 0:
                     Monster.tag = "E_B";

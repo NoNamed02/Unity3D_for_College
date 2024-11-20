@@ -9,11 +9,12 @@ public class Move_2rd : MonoBehaviour
     float speed = 5f;
 
     public int HP = 100;
+    private GameObject bullet;
 
     Vector3 offset = new Vector3(0, 6, -10);
     void Start()
     {
-
+        bullet = Resources.Load<GameObject>("Bullet");
     }
 
     // Update is called once per frame
@@ -28,6 +29,10 @@ public class Move_2rd : MonoBehaviour
         {
             Vector3 lookTarget = transform.position + moveDirection;
             transform.LookAt(lookTarget);
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(bullet, gameObject.transform.position + new Vector3(0, -0.9f, 1), gameObject.transform.rotation);
         }
 
         Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, transform.position + offset, 5f * Time.deltaTime);

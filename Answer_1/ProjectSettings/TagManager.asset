@@ -10,6 +10,7 @@ TagManager:
   - E_B
   - E_G
   - E_Y
+  - bullet
   layers:
   - Default
   - TransparentFX
